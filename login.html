@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtHaven | Login</title>
+  <link rel="stylesheet" type="text/css" href="regstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <img src="images/logo3.png" class="logo">
+  <div class="wrapper">
+    <div class="form-wrapper sign-in">
+      <form action="phplogin.php" class="login-form active" method="post" id="loginform"><br><br><br><br>
+        <h2>Login</h2>
+        <div class="input-group">
+          <input type="text" name="uname" required>
+          <label for="uname">Username</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="pwd" name="pwd" required>
+          <label for="pwd">Password</label>
+          <span class="toggle-password" onclick="togglePasswordVisibility()"><i class="fas fa-eye" style="color: antiquewhite;"></i></span>
+        </div>
+
+        <!--<div class="usertype">
+          <label>
+            <input type="radio" name="userType" value="a"> Artist
+          </label>
+          <label>
+            <input type="radio" name="userType" value="c"> Customer
+          </label>
+        </div>-->
+        <button type="submit">Login</button>
+        <div class="signUp-link">
+          <p>Don't have an account? <a href="signup.html" class="signUpBtn-link">Sign Up</a></p>
+          <p><a href="home.html" class="home-link">Go Home</a></p>
+          <br><br><br><br><br><br><br><br>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="loginscript.js"></script>
+</body>
+</html>

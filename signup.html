@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtHaven | Sign Up</title>
+  <link rel="stylesheet" type="text/css" href="regstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <img src="images/logo3.png" class="logo">
+  <div class="wrapper">
+    <div class="form-wrapper sign-up">
+      <form action="phpsignup.php" method="post" class="signup-form active" id="signupform">
+        <h2>Sign Up</h2>
+
+        <div class="input-group">
+          <input type="text" name="name" required>
+          <label for="name">Name</label>
+        </div>
+        <div class="input-group">
+          <input type="text" name="uname"required title="Username required">
+          <label for="uname">Username</label>
+        </div>
+        <div class="input-group">
+          <input type="email" name="email" 
+          required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          title="Must be a valid e-mail">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-group">
+          <input type="password" name="pwd" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                 title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters">
+          <label for="pwd">Password</label>
+          <span class="eye-icon" onclick="togglePasswordVisibility()">
+            <i class="fas fa-eye" id="toggle-password" style="color: antiquewhite;"></i>
+          </span>
+        </div>
+        
+        <div class="input-group">
+          <input type="number" name="cont" required pattern="[0-9]{10}" maxlength="10" 
+          title="Must contain only 10 digits">
+          <label for="cont">Contact</label>
+        </div>
+        <div class="usertype">
+          <label>
+		        <input type="radio" name="userType" value="a" required> Artist 
+          </label>
+          <label>
+            <input type="radio" name="userType" value="c" required> Customer
+          </label>
+        </div>
+        <button type="submit">Sign Up</button>
+        <div class="signUp-link">
+          <p>Already have an account? <a href="login.html" class="signInBtn-link">Login</a></p>
+          <p><a href="home.html" class="home-link">Go Home</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="signupscript.js"></script>
+</body>
+</html>
